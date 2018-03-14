@@ -5,3 +5,4 @@
 vendor/*
 var/*
 .env
+package-lock.json
