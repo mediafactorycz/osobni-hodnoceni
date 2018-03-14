@@ -6,3 +6,5 @@ vendor/*
 var/*
 .env
 package-lock.json
+/_docker/nginx/logs
+/_docker/node/logs
