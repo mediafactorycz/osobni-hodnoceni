@@ -2,9 +2,9 @@
 /node_modules
 /yarn-error.log
 /.next
-vendor/*
-var/*
-.env
-package-lock.json
+/vendor/*
+/var/*
+/.env
+/package-lock.json
 /_docker/nginx/logs
 /_docker/node/logs

@@ -2,6 +2,7 @@ version: '2'
 services:
     db:
         image: mysql:5.7
+        container_name: ov_db
         ports:
             - "3306:3306"
         volumes:
@@ -24,7 +25,8 @@ services:
             - db
     node:
         build: ./_docker/node
-#        user: "node"
+        container_name: ov_node
+        user: "node"
         tty: true
         links:
             - php
@@ -34,10 +36,11 @@ services:
         volumes:
             - ./:/home/node/app
         ports:
-            - "3000:3000"
+            - "80:3000"
 
     nginx:
         build: ./_docker/nginx
+        container_name: ov_nginx
         ports:
             - "81:80"
         links:
