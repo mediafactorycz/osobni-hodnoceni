@@ -1,0 +1,21 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "no-console": false,
+    "quotemark": ["single"],
+    "no-consecutive-blank-lines": [false],
+    "no-trailing-whitespace": false,
+    "newline-before-return": true,
+    "no-irregular-whitespace": true,
+    "eofline": false,
+    "curly": true,
+    "one-line": [true, "check-catch", "check-finally", "check-else", "check-whitespace"],
+    "whitespace": true,
+    "indent": [true, "spaces"],
+    "no-empty": false,
+    "max-line-length": [false],
+    "interface-name": false,
+    "ordered-imports": false,
+    "jsx-wrap-multiline": false
+  }
+}
