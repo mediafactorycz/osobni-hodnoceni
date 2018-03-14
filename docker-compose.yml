@@ -24,8 +24,8 @@ services:
             - db
     node:
         build: ./_docker/node
-        image: "node:8"
-        user: "node"
+#        user: "node"
+        tty: true
         links:
             - php
             - nginx
@@ -34,7 +34,7 @@ services:
         volumes:
             - ./:/home/node/app
         ports:
-            - "80:3000"
+            - "3000:3000"
 
     nginx:
         build: ./_docker/nginx
