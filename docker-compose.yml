@@ -23,19 +23,18 @@ services:
         links:
             - db
     node:
+        build: ./_docker/node
         image: "node:8"
         user: "node"
         links:
             - php
             - nginx
-        working_dir: /home/node/app
         environment:
             - NODE_ENV=production
         volumes:
-            - ./server:/home/node/app
+            - ./:/home/node/app
         ports:
             - "80:3000"
-        command: "npm start"
 
     nginx:
         build: ./_docker/nginx
