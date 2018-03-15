@@ -18,6 +18,7 @@ app.prepare().then(() => {
         try {
             const getUsers = async () => {
                 return axios.get('http://5aa8158bcef9ba001442fcac.mockapi.io/oh/api/users');
+//                return await axios.get('http://localhost:81/api');
             };
 
             const users = await getUsers();
