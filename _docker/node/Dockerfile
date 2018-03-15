@@ -12,6 +12,8 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 WORKDIR /home/node/app
 
-CMD yarn --pure-lockfile && yarn build && yarn start
+RUN yarn global add pm2
+
+CMD yarn --pure-lockfile && yarn build && pm2-runtime start server/index.js --name="osobni-hodnoceni"
 
 EXPOSE 3000
